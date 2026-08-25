@@ -33,10 +33,10 @@
 
 ---
 
-### 🖥️ Security Operations Terminal
+### 🖥️ Live Security Operations Terminal
 
 <div align="center">
-  <img src="./assets/terminal-animation.svg" width="100%" alt="SOC Terminal Interface" />
+  <img src="./assets/security-terminal.svg" width="100%" alt="Live Security Operations Terminal" />
 </div>
 
 ---

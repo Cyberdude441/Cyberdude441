@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#06090e"/>
+      <stop offset="100%" stop-color="#040608"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <pattern id="gridLines" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00ffc8" stroke-width="0.25" stroke-opacity="0.08"/>
+    </pattern>
+    <linearGradient id="scanlineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffc8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00ffc8" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#00ffc8" stop-opacity="0"/>
+    </linearGradient>
+
+    <style>
+      .txt {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 12.5px;
+      }
+      .prompt { fill: #00ffc8; font-weight: bold; }
+      .cmd { fill: #f8fafc; font-weight: 600; }
+      .boot { fill: #64748b; font-size: 11.5px; }
+      .boot-ok { fill: #38bdf8; font-weight: bold; font-size: 11.5px; }
+      .k { fill: #38bdf8; font-weight: bold; }
+      .v { fill: #94a3b8; }
+      .hi { fill: #00ffc8; font-weight: bold; }
+      .alert { fill: #ff0055; font-weight: bold; }
+      .exec { fill: #cbd5e1; }
+      .success { fill: #2ea44f; font-weight: bold; }
+
+      /* Animation keyframes */
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .cursor {
+        animation: blink 0.8s infinite;
+      }
+
+      /* Scanline sweep animation */
+      @keyframes scan {
+        0% { transform: translateY(-500px); }
+        100% { transform: translateY(500px); }
+      }
+      .scanline {
+        animation: scan 6s linear infinite;
+      }
+
+      /* Staggered sequential reveals */
+      /* Total loop duration: 16s */
+      @keyframes seq-b1 { 0%, 2% { opacity: 0; } 3%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-b2 { 0%, 5% { opacity: 0; } 6%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-b3 { 0%, 8% { opacity: 0; } 9%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-b4 { 0%, 11% { opacity: 0; } 12%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+
+      @keyframes seq-cmd1 { 0%, 15% { opacity: 0; } 16%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-json1 { 0%, 20% { opacity: 0; } 21%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-json2 { 0%, 24% { opacity: 0; } 25%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-json3 { 0%, 28% { opacity: 0; } 29%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-json4 { 0%, 32% { opacity: 0; } 33%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-json5 { 0%, 36% { opacity: 0; } 37%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+
+      @keyframes seq-cmd2 { 0%, 42% { opacity: 0; } 43%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-exec1 { 0%, 48% { opacity: 0; } 49%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-exec2 { 0%, 53% { opacity: 0; } 54%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-exec3 { 0%, 58% { opacity: 0; } 59%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-final1 { 0%, 63% { opacity: 0; } 64%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-final2 { 0%, 68% { opacity: 0; } 69%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+
+      .b1 { animation: seq-b1 16s infinite; }
+      .b2 { animation: seq-b2 16s infinite; }
+      .b3 { animation: seq-b3 16s infinite; }
+      .b4 { animation: seq-b4 16s infinite; }
+
+      .c1 { animation: seq-cmd1 16s infinite; }
+      .j1 { animation: seq-json1 16s infinite; }
+      .j2 { animation: seq-json2 16s infinite; }
+      .j3 { animation: seq-json3 16s infinite; }
+      .j4 { animation: seq-json4 16s infinite; }
+      .j5 { animation: seq-json5 16s infinite; }
+
+      .c2 { animation: seq-cmd2 16s infinite; }
+      .e1 { animation: seq-exec1 16s infinite; }
+      .e2 { animation: seq-exec2 16s infinite; }
+      .e3 { animation: seq-exec3 16s infinite; }
+      .f1 { animation: seq-final1 16s infinite; }
+      .f2 { animation: seq-final2 16s infinite; }
+
+      /* Pulse glowing node indicator */
+      @keyframes nodePulse {
+        0%, 100% { fill: #00ffc8; opacity: 0.3; }
+        50% { fill: #00ffc8; opacity: 1; }
+      }
+      .node-live { animation: nodePulse 2s infinite; }
+    </style>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="880" height="500" rx="12" fill="url(#termGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="880" height="500" rx="12" fill="url(#gridLines)"/>
+
+  <!-- Window Header -->
+  <rect width="880" height="36" rx="12" fill="url(#headerGrad)"/>
+  <rect y="24" width="880" height="12" fill="#1e293b"/>
+  
+  <!-- Window Controls -->
+  <circle cx="22" cy="18" r="6" fill="#ef4444"/>
+  <circle cx="42" cy="18" r="6" fill="#f59e0b"/>
+  <circle cx="62" cy="18" r="6" fill="#10b981"/>
+
+  <!-- Header Title -->
+  <text x="440" y="23" fill="#94a3b8" font-family="'Fira Code', ui-monospace, monospace" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1">
+    cyberdude@soc-command-node-01: ~/security-ops (LIVE SEC-FEED)
+  </text>
+  <circle cx="730" cy="18" r="4.5" class="node-live"/>
+  <text x="742" y="22" fill="#00ffc8" font-family="'Fira Code', ui-monospace, monospace" font-size="10" font-weight="bold">ONLINE</text>
+
+  <!-- Scanline Layer -->
+  <rect width="880" height="70" fill="url(#scanlineGrad)" class="scanline" pointer-events="none"/>
+
+  <!-- Terminal Content Body -->
+  <g transform="translate(26, 60)" class="txt">
+
+    <!-- 1. Initialization Lines -->
+    <g class="b1">
+      <text x="0" y="0" class="boot">[SYS_INIT] Initializing Security Operations Terminal [SOC-CORE-01]...</text>
+    </g>
+    <g class="b2">
+      <text x="0" y="18" class="boot">[NET_AUTH] Connecting to Threat Intelligence Feeds &amp; eBPF Kernel Probes...</text>
+    </g>
+    <g class="b3">
+      <text x="0" y="36" class="boot">[AI_CORE] Starting Collaborative Intelligence Engine [CyberQwen // Nemotron // Gemini]...</text>
+    </g>
+    <g class="b4">
+      <text x="0" y="54" class="boot-ok">[✓] SOC Environment Loaded. Operator: Soumava Das [Cybersecurity Researcher]</text>
+    </g>
+
+    <!-- 2. Command 1 -->
+    <g class="c1" transform="translate(0, 84)">
+      <text x="0" y="0" class="prompt">┌──(cyberdude㉿soc-node)-[~/security]</text>
+      <text x="0" y="18" class="prompt">└─$</text>
+      <text x="35" y="18" class="cmd">cat /etc/security/identity.json</text>
+    </g>
+
+    <!-- 3. JSON Identity Body -->
+    <g transform="translate(18, 126)">
+      <g class="j1">
+        <text x="0" y="0" class="k">"researcher":</text>
+        <text x="130" y="0" class="hi">"Soumava Das",</text>
+      </g>
+
+      <g class="j2">
+        <text x="0" y="19" class="k">"focus_areas":</text>
+        <text x="130" y="19" class="v">[</text>
+        <text x="145" y="19" class="hi">"Threat Intelligence"</text>
+        <text x="330" y="19" class="v">, </text>
+        <text x="345" y="19" class="hi">"DFIR &amp; Memory Triage"</text>
+        <text x="545" y="19" class="v">, </text>
+        <text x="560" y="19" class="hi">"Kernel eBPF / Rust"</text>
+        <text x="735" y="19" class="v">],</text>
+      </g>
+
+      <g class="j3">
+        <text x="0" y="38" class="k">"active_systems":</text>
+        <text x="130" y="38" class="v">[</text>
+        <text x="145" y="38" class="hi">"API-Sentinel (eBPF)"</text>
+        <text x="335" y="38" class="v">, </text>
+        <text x="350" y="38" class="hi">"CyberQwen-AI (LLM)"</text>
+        <text x="535" y="38" class="v">, </text>
+        <text x="550" y="38" class="hi">"BruteForce-SOC"</text>
+        <text x="695" y="38" class="v">],</text>
+      </g>
+
+      <g class="j4">
+        <text x="0" y="57" class="k">"telemetry_state":</text>
+        <text x="145" y="57" class="alert">"MONITORING_ACTIVE // 0 CRITICAL BREACHES",</text>
+      </g>
+
+      <g class="j5">
+        <text x="0" y="76" class="k">"status":</text>
+        <text x="90" y="76" class="hi">"READY_FOR_ENGAGEMENT"</text>
+      </g>
+    </g>
+
+    <!-- 4. Command 2 -->
+    <g class="c2" transform="translate(0, 230)">
+      <text x="0" y="0" class="prompt">┌──(cyberdude㉿soc-node)-[~/security]</text>
+      <text x="0" y="18" class="prompt">└─$</text>
+      <text x="35" y="18" class="cmd">./init_defenses.sh --daemon</text>
+    </g>
+
+    <!-- 5. Command 2 Output -->
+    <g transform="translate(18, 272)">
+      <g class="e1">
+        <text x="0" y="0" class="exec">[+] Kernel eBPF hooks mounted successfully onto Linux socket layers...</text>
+      </g>
+      <g class="e2">
+        <text x="0" y="19" class="exec">[+] Multi-agent LLM consensus reasoning active for real-time artifact analysis...</text>
+      </g>
+      <g class="e3">
+        <text x="0" y="38" class="exec">[+] Threat monitoring, UBA scoring, and SOAR containment triggers online...</text>
+      </g>
+      <g class="f1">
+        <text x="0" y="58" class="success">[✓] Command center initialized. Defense perimeter secure.</text>
+      </g>
+      <g class="f2">
+        <text x="0" y="78" class="hi">[▶] SYSTEM READY // STANDBY FOR SECURITY DIRECTIVES</text>
+        <!-- Blinking Terminal Cursor -->
+        <rect x="475" y="66" width="9" height="15" fill="#00ffc8" class="cursor"/>
+      </g>
+    </g>
+
+  </g>
+</svg>
