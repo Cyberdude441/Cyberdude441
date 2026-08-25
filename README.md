@@ -160,21 +160,23 @@ I am a **Cybersecurity Researcher and Security Software Engineer** focused on lo
 
 ---
 
-### 📊 GitHub Activity & Metrics
+### 📊 Security Analytics & Activity Heatmap
 
 <div align="center">
-  <table border="0">
-    <tr>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=Cyberdude441&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffc8&icon_color=00b4d8&text_color=c9d1d9" height="165" alt="Cyberdude GitHub Stats"/>
-      </td>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Cyberdude441&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ffc8&text_color=c9d1d9" height="165" alt="Cyberdude Top Languages"/>
-      </td>
-    </tr>
-  </table>
-  <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Cyberdude441&theme=tokyonight&hide_border=true&background=0d1117&stroke=00ffc8&ring=00b4d8&fire=ff0055&currStreakLabel=00ffc8" alt="Cyberdude Streak Stats"/>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Repositories-11_Public_Projects-00ffc8?style=for-the-badge&logo=git&labelColor=0d1117" alt="Repositories"/>
+  <img src="https://img.shields.io/badge/Security_Research-10_Active_Cycles-00b4d8?style=for-the-badge&logo=target&labelColor=0d1117" alt="Cycles"/>
+  <img src="https://img.shields.io/badge/Core_Stack-Python_%7C_Rust_%7C_TS-ff0055?style=for-the-badge&logo=python&labelColor=0d1117" alt="Stack"/>
+  <img src="https://komarev.com/ghpvc/?username=Cyberdude441&color=00ffc8&style=for-the-badge&label=Profile+Views&labelColor=0d1117" alt="Profile Views"/>
+</p>
+
+#### 📈 Contribution & Research Activity
+
+<p align="center">
+  <img src="https://ghchart.rshah.org/00ffc8/Cyberdude441" width="100%" alt="Cyberdude Activity Heatmap"/>
+</p>
+
 </div>
 
 ---
