@@ -33,10 +33,26 @@
 
 ---
 
-### 🖥️ Live Security Operations Terminal
+### 🖥️ Autonomous SOC Operations Terminal
 
 <div align="center">
-  <img src="./assets/security-terminal.svg" width="100%" alt="Live Security Operations Terminal" />
+  <img src="./assets/soc-terminal.svg" width="100%" alt="Autonomous SOC Command Terminal" />
+</div>
+
+---
+
+### 🧠 AI Threat Intelligence & Neural Defense Network
+
+<div align="center">
+  <img src="./assets/ai-core.svg" width="100%" alt="AI Threat Intelligence Core" />
+</div>
+
+---
+
+### 🌐 Global Threat Telemetry & Sensor Network
+
+<div align="center">
+  <img src="./assets/threat-map.svg" width="100%" alt="Global Threat Sensor Network" />
 </div>
 
 ---

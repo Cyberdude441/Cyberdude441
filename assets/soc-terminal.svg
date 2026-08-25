@@ -1,0 +1,270 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="socBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="50%" stop-color="#04060a"/>
+      <stop offset="100%" stop-color="#020305"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#070b14"/>
+    </linearGradient>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffc8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00ffc8" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#00ffc8" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#00ffc8" fill-opacity="0.12"/>
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#00ffc8" stroke-width="0.2" stroke-opacity="0.06"/>
+    </pattern>
+
+    <style>
+      .txt { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+      .p-title { fill: #00ffc8; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; }
+      .p-sub { fill: #64748b; font-size: 10px; }
+      .code-key { fill: #38bdf8; font-size: 11.5px; font-weight: bold; }
+      .code-val { fill: #94a3b8; font-size: 11.5px; }
+      .code-hi { fill: #00ffc8; font-size: 11.5px; font-weight: bold; }
+      .code-alert { fill: #ff0055; font-size: 11.5px; font-weight: bold; }
+      .code-purple { fill: #c084fc; font-size: 11.5px; font-weight: bold; }
+      
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      .cursor { animation: blink 0.8s infinite; }
+
+      @keyframes scanSweep { 0% { transform: translateY(-620px); } 100% { transform: translateY(620px); } }
+      .scanline { animation: scanSweep 7s linear infinite; }
+
+      @keyframes pulseGlow { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+      .glow-node { animation: pulseGlow 1.8s infinite; }
+
+      /* Animation Sequences (18s Loop) */
+      @keyframes seq-boot { 0%, 2% { opacity: 0; } 3%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-cmd1 { 0%, 12% { opacity: 0; } 14%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-out1 { 0%, 22% { opacity: 0; } 24%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-cmd2 { 0%, 45% { opacity: 0; } 47%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-out2 { 0%, 55% { opacity: 0; } 57%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+      @keyframes seq-stream { 0%, 65% { opacity: 0; } 67%, 95% { opacity: 1; } 98%, 100% { opacity: 0; } }
+
+      .anim-boot { animation: seq-boot 18s infinite; }
+      .anim-cmd1 { animation: seq-cmd1 18s infinite; }
+      .anim-out1 { animation: seq-out1 18s infinite; }
+      .anim-cmd2 { animation: seq-cmd2 18s infinite; }
+      .anim-out2 { animation: seq-out2 18s infinite; }
+      .anim-stream { animation: seq-stream 18s infinite; }
+
+      /* Progress Bar Filling */
+      @keyframes fillProgress {
+        0%, 5% { width: 0px; }
+        25%, 95% { width: 140px; }
+        98%, 100% { width: 0px; }
+      }
+      .prog-bar { animation: fillProgress 18s ease-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Base Window Container -->
+  <rect width="920" height="620" rx="12" fill="url(#socBg)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="920" height="620" rx="12" fill="url(#dotGrid)"/>
+
+  <!-- Top Title Bar -->
+  <rect width="920" height="38" rx="12" fill="#0f172a"/>
+  <rect y="26" width="920" height="12" fill="#0f172a"/>
+  <circle cx="24" cy="19" r="6" fill="#ef4444"/>
+  <circle cx="44" cy="19" r="6" fill="#f59e0b"/>
+  <circle cx="64" cy="19" r="6" fill="#10b981"/>
+
+  <text x="460" y="24" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="11.5" font-weight="bold" text-anchor="middle" letter-spacing="1.5">
+    CYBERDUDE AUTONOMOUS SOC COMMAND CENTER // LIVE NODE: ALPHA-01
+  </text>
+  <circle cx="820" cy="19" r="4.5" fill="#00ffc8" class="glow-node"/>
+  <text x="832" y="23" fill="#00ffc8" font-family="'Fira Code', monospace" font-size="10" font-weight="bold">DEFENSE ACTIVE</text>
+
+  <!-- Scanline Overlay -->
+  <rect width="920" height="80" fill="url(#scanGrad)" class="scanline" pointer-events="none"/>
+
+  <!-- ==================== LEFT SIDE: MAIN TERMINAL STREAM ==================== -->
+  <g transform="translate(20, 52)">
+    <rect width="580" height="548" rx="8" fill="url(#panelGrad)" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Header of Left Panel -->
+    <rect width="580" height="28" rx="8" fill="#111c30"/>
+    <rect y="18" width="580" height="10" fill="#111c30"/>
+    <text x="18" y="19" class="p-title">LIVE OPERATIONS CONSOLE</text>
+    <text x="560" y="19" fill="#38bdf8" font-family="monospace" font-size="9" text-anchor="end">[TTY-01 // ENCRYPTED]</text>
+
+    <!-- Terminal Content Area -->
+    <g transform="translate(18, 46)" class="txt">
+      <!-- 1. Boot Phase -->
+      <g class="anim-boot">
+        <text x="0" y="0" fill="#64748b" font-size="11">[BOOT] Initializing Cyberdude SOC Core Engine...</text>
+        <text x="0" y="17" fill="#64748b" font-size="11">[BOOT] Mounting eBPF Linux Kernel Probes &amp; Telemetry Feeds...</text>
+        <text x="0" y="34" fill="#38bdf8" font-size="11">[AI_CORE] Synchronizing Multi-Agent Neural Consensus Engine...</text>
+        <text x="0" y="51" fill="#00ffc8" font-size="11" font-weight="bold">[✓] SYSTEM AUTHENTICATED: Soumava Das [Cybersecurity Researcher]</text>
+      </g>
+
+      <!-- 2. Command 1 -->
+      <g class="anim-cmd1" transform="translate(0, 78)">
+        <text x="0" y="0" fill="#00ffc8" font-weight="bold">┌──(cyberdude㉿soc-core)-[~/defense]</text>
+        <text x="0" y="18" fill="#00ffc8" font-weight="bold">└─$</text>
+        <text x="35" y="18" fill="#f8fafc" font-weight="bold">sudo ./initialize_soc.sh --profile</text>
+      </g>
+
+      <!-- 3. JSON Output -->
+      <g class="anim-out1" transform="translate(15, 118)">
+        <text x="0" y="0" class="code-key">"identity":</text>
+        <text x="110" y="0" class="code-hi">"Soumava Das",</text>
+
+        <text x="0" y="18" class="code-key">"role":</text>
+        <text x="110" y="18" class="code-val">"Cybersecurity Researcher &amp; Engineer",</text>
+
+        <text x="0" y="36" class="code-key">"domains":</text>
+        <text x="110" y="36" class="code-val">[</text>
+        <text x="125" y="36" class="code-hi">"Threat Intelligence"</text>
+        <text x="290" y="36" class="code-val">, </text>
+        <text x="305" y="36" class="code-hi">"DFIR"</text>
+        <text x="355" y="36" class="code-val">, </text>
+        <text x="370" y="36" class="code-hi">"Kernel eBPF"</text>
+        <text x="475" y="36" class="code-val">],</text>
+
+        <text x="0" y="54" class="code-key">"systems":</text>
+        <text x="110" y="54" class="code-val">[</text>
+        <text x="125" y="54" class="code-purple">"API-Sentinel"</text>
+        <text x="235" y="54" class="code-val">, </text>
+        <text x="250" y="54" class="code-purple">"CyberQwen-AI"</text>
+        <text x="365" y="54" class="code-val">, </text>
+        <text x="380" y="54" class="code-purple">"BruteForce-SOC"</text>
+        <text x="510" y="54" class="code-val">],</text>
+
+        <text x="0" y="72" class="code-key">"mission":</text>
+        <text x="110" y="72" class="code-hi">"Building resilient defensive security systems"</text>
+      </g>
+
+      <!-- 4. Command 2 -->
+      <g class="anim-cmd2" transform="translate(0, 216)">
+        <text x="0" y="0" fill="#00ffc8" font-weight="bold">┌──(cyberdude㉿soc-core)-[~/defense]</text>
+        <text x="0" y="18" fill="#00ffc8" font-weight="bold">└─$</text>
+        <text x="35" y="18" fill="#f8fafc" font-weight="bold">./activate_defense --secure --telemetry</text>
+      </g>
+
+      <!-- 5. Command 2 Execution Output -->
+      <g class="anim-out2" transform="translate(15, 256)">
+        <text x="0" y="0" fill="#94a3b8">[✓] eBPF network telemetry probes attached to socket layer</text>
+        <text x="0" y="18" fill="#94a3b8">[✓] AI multi-model reasoning active (Nemotron-70B + Gemini)</text>
+        <text x="0" y="36" fill="#94a3b8">[✓] IOC correlation &amp; UBA scoring engines operational</text>
+        <text x="0" y="54" fill="#00ffc8" font-weight="bold">[✓] THREAT MITIGATION PIPELINE ENGAGED // PERIMETER SECURE</text>
+      </g>
+
+      <!-- 6. Real-Time Telemetry Event Log -->
+      <g class="anim-stream" transform="translate(0, 335)">
+        <rect x="-5" y="-12" width="550" height="95" rx="5" fill="#060a12" stroke="#1e293b" stroke-width="0.8"/>
+        <text x="10" y="5" fill="#38bdf8" font-size="10" font-weight="bold">REAL-TIME THREAT LOG STREAM</text>
+        <text x="10" y="24" fill="#2ea44f" font-size="10.5">[INFO]  BOLA audit passed on /v1/user/profile - 0 violations</text>
+        <text x="10" y="42" fill="#eab308" font-size="10.5">[WARN]  High-frequency probe detected: IP 192.168.1.142 -> Throttled</text>
+        <text x="10" y="60" fill="#ff0055" font-size="10.5">[ALERT] Unauthorized Shadow API endpoint quarantined by API-Sentinel</text>
+        <text x="10" y="78" fill="#00ffc8" font-size="10.5" font-weight="bold">[STATUS] ALL SECURITY VECTORS SYNCHRONIZED</text>
+        <rect x="350" y="66" width="8" height="13" fill="#00ffc8" class="cursor"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT SIDE: SOC TELEMETRY & AI AGENTS ==================== -->
+  <g transform="translate(615, 52)">
+    
+    <!-- PANEL 1: SYSTEM HEALTH & INTEGRITY -->
+    <g transform="translate(0, 0)">
+      <rect width="285" height="165" rx="8" fill="url(#panelGrad)" stroke="#1e293b" stroke-width="1"/>
+      <rect width="285" height="26" rx="8" fill="#111c30"/>
+      <rect y="16" width="285" height="10" fill="#111c30"/>
+      <text x="15" y="18" class="p-title">SYSTEM INTEGRITY MATRIX</text>
+      
+      <!-- Meter 1 -->
+      <g transform="translate(15, 42)" class="txt">
+        <text x="0" y="0" fill="#94a3b8" font-size="10">Kernel eBPF Probes</text>
+        <text x="255" y="0" fill="#00ffc8" font-size="10" font-weight="bold" text-anchor="end">100%</text>
+        <rect x="0" y="5" width="255" height="6" rx="3" fill="#1e293b"/>
+        <rect x="0" y="5" height="6" rx="3" fill="#00ffc8" class="prog-bar"/>
+      </g>
+
+      <!-- Meter 2 -->
+      <g transform="translate(15, 76)" class="txt">
+        <text x="0" y="0" fill="#94a3b8" font-size="10">Threat Intel Engine</text>
+        <text x="255" y="0" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="end">100%</text>
+        <rect x="0" y="5" width="255" height="6" rx="3" fill="#1e293b"/>
+        <rect x="0" y="5" height="6" rx="3" fill="#38bdf8" class="prog-bar"/>
+      </g>
+
+      <!-- Meter 3 -->
+      <g transform="translate(15, 110)" class="txt">
+        <text x="0" y="0" fill="#94a3b8" font-size="10">AI Consensus Analysis</text>
+        <text x="255" y="0" fill="#c084fc" font-size="10" font-weight="bold" text-anchor="end">100%</text>
+        <rect x="0" y="5" width="255" height="6" rx="3" fill="#1e293b"/>
+        <rect x="0" y="5" height="6" rx="3" fill="#c084fc" class="prog-bar"/>
+      </g>
+
+      <!-- Meter 4 -->
+      <g transform="translate(15, 144)" class="txt">
+        <text x="0" y="0" fill="#94a3b8" font-size="10">DFIR Memory Triage</text>
+        <text x="255" y="0" fill="#2ea44f" font-size="10" font-weight="bold" text-anchor="end">READY</text>
+      </g>
+    </g>
+
+    <!-- PANEL 2: AI SECURITY AGENTS -->
+    <g transform="translate(0, 180)">
+      <rect width="285" height="175" rx="8" fill="url(#panelGrad)" stroke="#1e293b" stroke-width="1"/>
+      <rect width="285" height="26" rx="8" fill="#111c30"/>
+      <rect y="16" width="285" height="10" fill="#111c30"/>
+      <text x="15" y="18" class="p-title" fill="#c084fc">AI SECURITY AGENT CLUSTER</text>
+
+      <!-- Agent 1 -->
+      <g transform="translate(15, 44)">
+        <circle cx="6" cy="6" r="4" fill="#00ffc8" class="glow-node"/>
+        <text x="18" y="9" fill="#00ffc8" font-family="'Fira Code', monospace" font-size="11" font-weight="bold">CyberQwen-AI</text>
+        <text x="255" y="9" fill="#2ea44f" font-family="monospace" font-size="9" text-anchor="end">[ONLINE]</text>
+        <text x="18" y="24" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">Threat reasoning &amp; artifact parsing</text>
+      </g>
+
+      <!-- Agent 2 -->
+      <g transform="translate(15, 84)">
+        <circle cx="6" cy="6" r="4" fill="#38bdf8" class="glow-node"/>
+        <text x="18" y="9" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="11" font-weight="bold">DFIR-Inspector</text>
+        <text x="255" y="9" fill="#2ea44f" font-family="monospace" font-size="9" text-anchor="end">[ACTIVE]</text>
+        <text x="18" y="24" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">Memory dump analysis &amp; PCAP triage</text>
+      </g>
+
+      <!-- Agent 3 -->
+      <g transform="translate(15, 124)">
+        <circle cx="6" cy="6" r="4" fill="#ff0055" class="glow-node"/>
+        <text x="18" y="9" fill="#ff0055" font-family="'Fira Code', monospace" font-size="11" font-weight="bold">ThreatHunter-UBA</text>
+        <text x="255" y="9" fill="#38bdf8" font-family="monospace" font-size="9" text-anchor="end">[MONITORING]</text>
+        <text x="18" y="24" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">Behavioral score &amp; automated SOAR</text>
+      </g>
+    </g>
+
+    <!-- PANEL 3: DIGITAL FORENSICS TELEMETRY -->
+    <g transform="translate(0, 370)">
+      <rect width="285" height="178" rx="8" fill="url(#panelGrad)" stroke="#1e293b" stroke-width="1"/>
+      <rect width="285" height="26" rx="8" fill="#111c30"/>
+      <rect y="16" width="285" height="10" fill="#111c30"/>
+      <text x="15" y="18" class="p-title" fill="#38bdf8">DFIR &amp; FORENSIC STATUS</text>
+
+      <g transform="translate(15, 42)" class="txt">
+        <text x="0" y="0" fill="#94a3b8" font-size="10.5">Memory Acquisition:</text>
+        <text x="255" y="0" fill="#00ffc8" font-size="10.5" font-weight="bold" text-anchor="end">ACTIVE</text>
+
+        <text x="0" y="24" fill="#94a3b8" font-size="10.5">Artifact Extraction:</text>
+        <text x="255" y="24" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="end">RUNNING</text>
+
+        <text x="0" y="48" fill="#94a3b8" font-size="10.5">Timeline Reconstruction:</text>
+        <text x="255" y="48" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="end">READY</text>
+
+        <text x="0" y="72" fill="#94a3b8" font-size="10.5">Hash Verification (SHA256):</text>
+        <text x="255" y="72" fill="#2ea44f" font-size="10.5" font-weight="bold" text-anchor="end">VERIFIED ✓</text>
+
+        <rect x="0" y="90" width="255" height="24" rx="4" fill="#0b1322" stroke="#00ffc8" stroke-width="0.6"/>
+        <text x="127" y="106" fill="#00ffc8" font-size="9" font-weight="bold" text-anchor="middle" letter-spacing="1">EVIDENCE SECURED // CHAIN INTACT</text>
+      </g>
+    </g>
+
+  </g>
+</svg>

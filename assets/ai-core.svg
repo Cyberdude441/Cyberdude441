@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="100%" stop-color="#030509"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffc8" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#00b4d8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7928ca" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      @keyframes orbit {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes orbitRev {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      .orb-1 { transform-origin: 440px 130px; animation: orbit 12s linear infinite; }
+      .orb-2 { transform-origin: 440px 130px; animation: orbitRev 16s linear infinite; }
+      .core-txt { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="880" height="260" rx="12" fill="url(#aiBg)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Center Core Aura -->
+  <circle cx="440" cy="130" r="85" fill="url(#coreGlow)"/>
+
+  <!-- Orbit Ring 1 -->
+  <g class="orb-1">
+    <ellipse cx="440" cy="130" rx="140" ry="55" fill="none" stroke="#00ffc8" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="8,6"/>
+    <circle cx="580" cy="130" r="6" fill="#00ffc8"/>
+    <circle cx="300" cy="130" r="5" fill="#38bdf8"/>
+  </g>
+
+  <!-- Orbit Ring 2 -->
+  <g class="orb-2">
+    <ellipse cx="440" cy="130" rx="190" ry="75" fill="none" stroke="#c084fc" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="12,8"/>
+    <circle cx="440" cy="55" r="5.5" fill="#c084fc"/>
+    <circle cx="440" cy="205" r="5.5" fill="#ff0055"/>
+  </g>
+
+  <!-- Core Center Badge -->
+  <circle cx="440" cy="130" r="42" fill="#0b1322" stroke="#00ffc8" stroke-width="2"/>
+  <text x="440" y="127" fill="#00ffc8" font-family="'Fira Code', monospace" font-size="12" font-weight="900" text-anchor="middle" letter-spacing="1">NEURAL</text>
+  <text x="440" y="142" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="10" font-weight="bold" text-anchor="middle">AI CORE</text>
+
+  <!-- Left Model: CyberQwen -->
+  <g transform="translate(130, 130)">
+    <rect x="-100" y="-35" width="200" height="70" rx="8" fill="#0d1829" stroke="#00ffc8" stroke-width="1"/>
+    <text x="0" y="-12" fill="#00ffc8" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" text-anchor="middle">CyberQwen-Merged</text>
+    <text x="0" y="6" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5" text-anchor="middle">Domain-Adapted QLoRA LLM</text>
+    <text x="0" y="22" fill="#2ea44f" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">LOCAL REASONING: ACTIVE</text>
+  </g>
+
+  <!-- Right Model: Multi-Agent Consensus -->
+  <g transform="translate(750, 130)">
+    <rect x="-100" y="-35" width="200" height="70" rx="8" fill="#0d1829" stroke="#c084fc" stroke-width="1"/>
+    <text x="0" y="-12" fill="#c084fc" font-family="'Fira Code', monospace" font-size="12" font-weight="bold" text-anchor="middle">Nemotron // Gemini</text>
+    <text x="0" y="6" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5" text-anchor="middle">Adversarial Consensus Engine</text>
+    <text x="0" y="22" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">CROSS-AUDIT: SYNCHRONIZED</text>
+  </g>
+
+  <!-- Top Title -->
+  <text x="440" y="28" fill="#00ffc8" font-family="'Fira Code', monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="2">
+    MULTI-AGENT DEFENSIVE INTELLIGENCE PIPELINE
+  </text>
+</svg>

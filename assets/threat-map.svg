@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mapBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080d1a"/>
+      <stop offset="100%" stop-color="#03060c"/>
+    </linearGradient>
+    <style>
+      @keyframes pulseRing {
+        0% { r: 6; opacity: 1; }
+        100% { r: 24; opacity: 0; }
+      }
+      .ring-pulse { animation: pulseRing 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) infinite; }
+      .grid-dot { fill: #00ffc8; opacity: 0.15; }
+    </style>
+  </defs>
+
+  <rect width="880" height="240" rx="12" fill="url(#mapBg)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Background Topology Grid -->
+  <g class="grid-dot">
+    <circle cx="100" cy="60" r="1.5"/><circle cx="140" cy="60" r="1.5"/><circle cx="180" cy="60" r="1.5"/><circle cx="220" cy="60" r="1.5"/>
+    <circle cx="100" cy="100" r="1.5"/><circle cx="140" cy="100" r="1.5"/><circle cx="180" cy="100" r="1.5"/><circle cx="220" cy="100" r="1.5"/>
+    <circle cx="100" cy="140" r="1.5"/><circle cx="140" cy="140" r="1.5"/><circle cx="180" cy="140" r="1.5"/><circle cx="220" cy="140" r="1.5"/>
+    <circle cx="100" cy="180" r="1.5"/><circle cx="140" cy="180" r="1.5"/><circle cx="180" cy="180" r="1.5"/><circle cx="220" cy="180" r="1.5"/>
+
+    <circle cx="400" cy="60" r="1.5"/><circle cx="440" cy="60" r="1.5"/><circle cx="480" cy="60" r="1.5"/><circle cx="520" cy="60" r="1.5"/>
+    <circle cx="400" cy="100" r="1.5"/><circle cx="440" cy="100" r="1.5"/><circle cx="480" cy="100" r="1.5"/><circle cx="520" cy="100" r="1.5"/>
+    <circle cx="400" cy="140" r="1.5"/><circle cx="440" cy="140" r="1.5"/><circle cx="480" cy="140" r="1.5"/><circle cx="520" cy="140" r="1.5"/>
+    <circle cx="400" cy="180" r="1.5"/><circle cx="440" cy="180" r="1.5"/><circle cx="480" cy="180" r="1.5"/><circle cx="520" cy="180" r="1.5"/>
+
+    <circle cx="700" cy="60" r="1.5"/><circle cx="740" cy="60" r="1.5"/><circle cx="780" cy="60" r="1.5"/>
+    <circle cx="700" cy="100" r="1.5"/><circle cx="740" cy="100" r="1.5"/><circle cx="780" cy="100" r="1.5"/>
+    <circle cx="700" cy="140" r="1.5"/><circle cx="740" cy="140" r="1.5"/><circle cx="780" cy="140" r="1.5"/>
+    <circle cx="700" cy="180" r="1.5"/><circle cx="740" cy="180" r="1.5"/><circle cx="780" cy="180" r="1.5"/>
+  </g>
+
+  <!-- Network Interconnection Paths -->
+  <path d="M 180 100 Q 320 40 460 120 T 740 100" fill="none" stroke="#00ffc8" stroke-width="1.2" stroke-dasharray="6,4" stroke-opacity="0.6"/>
+  <path d="M 220 160 Q 380 200 500 140 T 720 160" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="6,4" stroke-opacity="0.5"/>
+  <path d="M 460 120 L 500 140" fill="none" stroke="#ff0055" stroke-width="1.5" stroke-opacity="0.7"/>
+
+  <!-- Telemetry Nodes -->
+  <!-- Node 1: US-East Relay -->
+  <g transform="translate(180, 100)">
+    <circle r="16" fill="none" stroke="#00ffc8" stroke-width="1.2" class="ring-pulse"/>
+    <circle r="6" fill="#00ffc8"/>
+    <text x="0" y="24" fill="#00ffc8" font-family="'Fira Code', monospace" font-size="9" font-weight="bold" text-anchor="middle">US-EAST [SOC-RELAY]</text>
+  </g>
+
+  <!-- Node 2: EU-Central Core -->
+  <g transform="translate(460, 120)">
+    <circle r="20" fill="none" stroke="#38bdf8" stroke-width="1.5" class="ring-pulse"/>
+    <circle r="7" fill="#38bdf8"/>
+    <text x="0" y="26" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9" font-weight="bold" text-anchor="middle">EU-CORE [TELEMETRY HUB]</text>
+  </g>
+
+  <!-- Node 3: APAC Node -->
+  <g transform="translate(740, 100)">
+    <circle r="16" fill="none" stroke="#c084fc" stroke-width="1.2" class="ring-pulse"/>
+    <circle r="6" fill="#c084fc"/>
+    <text x="0" y="24" fill="#c084fc" font-family="'Fira Code', monospace" font-size="9" font-weight="bold" text-anchor="middle">APAC [EDGE SENSOR]</text>
+  </g>
+
+  <!-- Node 4: Quarantined Endpoint -->
+  <g transform="translate(500, 140)">
+    <circle r="5" fill="#ff0055"/>
+    <text x="0" y="-10" fill="#ff0055" font-family="'Fira Code', monospace" font-size="8.5" font-weight="bold" text-anchor="middle">[QUARANTINED IP]</text>
+  </g>
+
+  <!-- Title & Status Header -->
+  <text x="440" y="28" fill="#00ffc8" font-family="'Fira Code', monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="2">
+    GLOBAL THREAT INTELLIGENCE &amp; SENSOR NETWORK
+  </text>
+  <text x="440" y="222" fill="#64748b" font-family="monospace" font-size="9.5" text-anchor="middle" letter-spacing="1">
+    [ SENSORS: ACTIVE • PACKET INSPECTION: REAL-TIME • 0 ACTIVE INCIDENTS ]
+  </text>
+</svg>
