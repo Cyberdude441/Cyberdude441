@@ -166,9 +166,12 @@ I am a **Cybersecurity Researcher and Security Software Engineer** focused on lo
 
 <p align="center">
   <img src="https://img.shields.io/badge/Repositories-11_Public_Projects-00ffc8?style=for-the-badge&logo=git&labelColor=0d1117" alt="Repositories"/>
+  &nbsp;
   <img src="https://img.shields.io/badge/Security_Research-10_Active_Cycles-00b4d8?style=for-the-badge&logo=target&labelColor=0d1117" alt="Cycles"/>
+  &nbsp;
   <img src="https://img.shields.io/badge/Core_Stack-Python_%7C_Rust_%7C_TS-ff0055?style=for-the-badge&logo=python&labelColor=0d1117" alt="Stack"/>
-  <img src="https://komarev.com/ghpvc/?username=Cyberdude441&color=00ffc8&style=for-the-badge&label=Profile+Views&labelColor=0d1117" alt="Profile Views"/>
+  &nbsp;
+  <img src="https://hits.sh/github.com/Cyberdude441.svg?style=for-the-badge&label=Profile%20Views&color=00ffc8&labelColor=0d1117" alt="Profile Views"/>
 </p>
 
 #### 📈 Contribution & Research Activity
