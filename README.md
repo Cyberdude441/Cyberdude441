@@ -188,16 +188,16 @@ I am a **Cybersecurity Researcher and Security Software Engineer** focused on lo
 <p>I am actively seeking <strong>Cybersecurity Internships, Security Analyst, Detection Engineer, and Threat Intelligence</strong> roles.</p>
 
 <p align="center">
-  <a href="https://github.com/Cyberdude441">
+  <a href="https://github.com/Cyberdude441" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Cyberdude441-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"/>
   </a>
   &nbsp;
-  <a href="https://github.com/Cyberdude441">
-    <img src="https://img.shields.io/badge/Portfolio-Security_Projects-00ffc8?style=for-the-badge&logo=target&logoColor=black&labelColor=0d1117" alt="Portfolio"/>
+  <a href="https://www.linkedin.com/in/soumava-das-267999332" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Soumava_Das-0077b5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"/>
   </a>
   &nbsp;
-  <a href="https://github.com/Cyberdude441">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077b5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"/>
+  <a href="https://www.instagram.com/iamsoumava/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-@iamsoumava-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d1117" alt="Instagram"/>
   </a>
 </p>
 
