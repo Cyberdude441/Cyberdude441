@@ -1,16 +1,16 @@
 <div align="center">
 
-<!-- Header Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,1,2,3,4&height=220&section=header&text=Soumava%20Das%20%7C%20Cyberdude&fontSize=34&fontColor=00ffc8&animation=fadeIn&fontAlignY=38&desc=Cybersecurity%20Researcher%20%E2%80%A2%20DFIR%20%E2%80%A2%20Threat%20Intelligence%20%E2%80%A2%20Security%20Automation&descSize=15&descAlignY=58&descColor=a0aec0" width="100%" alt="Cyberdude Header Banner"/>
+<!-- Futuristic Cyber Command Center Banner -->
+<img src="./assets/cyber-banner.svg" width="100%" alt="Cyber Command Center Banner" />
 
 <!-- Dynamic Animated Typing Line -->
 <a href="https://github.com/Cyberdude441">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00FFC8&center=true&vCenter=true&width=750&lines=Cybersecurity+Researcher+%7C+DFIR+Specialist;Threat+Intelligence+%26+SOC+Detection+Engineering;Low-Level+eBPF+Kernel+Probes+%26+Security+Automation;Domain-Adapted+Cybersecurity+LLM+Pipelines;Penetration+Testing+%26+API+Vulnerability+Research" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=1000&color=00FFC8&center=true&vCenter=true&width=750&lines=%3E+Initializing+Cyber+Intelligence+Core...;%3E+Mounting+Kernel+eBPF+Telemetry+Probes...;%3E+Neural+Multi-Agent+Consensus%3A+Access+Granted;%3E+Identity%3A+Soumava+Das+%5BCybersecurity+Researcher%5D;%3E+Specialization%3A+DFIR+%7C+Threat+Intel+%7C+AppSec" alt="Typing SVG" />
 </a>
 
 <br/>
 
-<!-- Status & Social Strip -->
+<!-- Status & Navigation Bar -->
 <p align="center">
   <a href="https://github.com/Cyberdude441" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Cyberdude441-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"/>
@@ -24,7 +24,7 @@
     <img src="https://img.shields.io/badge/Instagram-@iamsoumava-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d1117" alt="Instagram"/>
   </a>
   &nbsp;
-  <img src="https://img.shields.io/badge/Status-Open_to_Opportunities-2ea44f?style=for-the-badge&logo=codeforces&logoColor=white&labelColor=0d1117" alt="Status"/>
+  <img src="https://img.shields.io/badge/Status-Active_Researcher-2ea44f?style=for-the-badge&logo=target&logoColor=white&labelColor=0d1117" alt="Status"/>
   &nbsp;
   <img src="https://hits.sh/github.com/Cyberdude441.svg?style=for-the-badge&label=Profile%20Views&color=00ffc8&labelColor=0d1117" alt="Profile Views"/>
 </p>
@@ -33,37 +33,28 @@
 
 ---
 
-### 🖥️ Security Terminal Interface
+### 🖥️ Security Operations Terminal
 
-```bash
-┌──(Cyberdude㉿security)-[~/profile]
-└─$ identity
-Soumava Das — Cybersecurity Researcher & Security Software Engineer
-
-┌──(Cyberdude㉿security)-[~/profile]
-└─$ expertise
-• Threat Intelligence & Proactive Threat Hunting (UBA / SOAR)
-• Digital Forensics & Incident Response (DFIR / PCAP / Memory)
-• Low-Level Kernel Telemetry & Packet Interception (eBPF / Rust / Aya)
-• Web & API Vulnerability Assessment (OWASP Top 10 / OWASP API-10)
-• Domain-Adapted LLM Engineering & Security Automation (QLoRA)
-• Attack Surface Mapping & OSINT Reconnaissance (CT Logs / DNS)
-
-┌──(Cyberdude㉿security)-[~/profile]
-└─$ objective
-"Building resilient security defenses through deep protocol inspection, low-level engineering, and automated detection."
-```
+<div align="center">
+  <img src="./assets/terminal-animation.svg" width="100%" alt="SOC Terminal Interface" />
+</div>
 
 ---
 
 ### 🛰️ Security Operations Dashboard
 
 <div align="center">
+  <img src="./assets/security-dashboard.svg" width="100%" alt="Security Dashboard Status" />
+</div>
 
-| Operational Vector | Focus Domain | Key Capabilities & Implementations |
+<br/>
+
+<div align="center">
+
+| Vector | Focus Domain | Key Capabilities & Implementations |
 | :--- | :--- | :--- |
 | 🛡️ **API & AppSec** | OWASP API Top 10 | [API Sentinel](https://github.com/Cyberdude441/API-Sentinel-main) — Non-intrusive eBPF kernel probes (Rust/Aya) for real-time BOLA & Shadow API discovery |
-| 🧠 **AI Security & LLMs** | Security LLMs & Threat Modeling | [CyberQwen-AI](https://github.com/Cyberdude441/CyberQwen-AI) — 4-Tier QLoRA fine-tuned cybersecurity LLM with multi-agent consensus synthesis |
+| 🧠 **AI Security & LLMs** | Security LLMs & Threat Modeling | [CyberQwen-AI](https://github.com/Cyberdude441/CyberQwen-AI) — 4-Tier QLoRA fine-tuned cybersecurity model with multi-agent consensus synthesis |
 | 🚨 **Threat Intel & Blue Team** | Auth Monitoring & Incident Triage | [Brute Force SOC](https://github.com/Cyberdude441/bruteforce-detector) — Real-time telemetry, UBA threat scoring, SOAR containment, & Telegram alerting |
 | 🕵️ **OSINT & Reconnaissance** | Attack Surface Discovery | [Subdomain OSINT](https://github.com/Cyberdude441/Subdomain-Enumerator-OSINT) — Multi-threaded Certificate Transparency log harvester & DNS probe |
 | 🔬 **DFIR & Protocol Labs** | Forensics & Protocol Dissection | [CyberSec Journey](https://github.com/Cyberdude441/CyberSec-Journey) — 10-Cycle offensive/defensive research curriculum & custom network tools |
@@ -72,7 +63,7 @@ Soumava Das — Cybersecurity Researcher & Security Software Engineer
 
 ---
 
-### 🧰 Security Arsenal & Technical Proficiency
+### 🧰 Security Arsenal & Technical Stack
 
 <div align="center">
 
