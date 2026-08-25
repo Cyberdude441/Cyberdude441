@@ -10,13 +10,19 @@
 
 <br/>
 
-<!-- Status & Telemetry Badges -->
+<!-- Status & Social Strip -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Focus-Cybersecurity_Research-00ffc8?style=for-the-badge&logo=target&logoColor=black&labelColor=0d1117" alt="Focus"/>
+  <a href="https://github.com/Cyberdude441" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Cyberdude441-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117" alt="GitHub"/>
+  </a>
   &nbsp;
-  <img src="https://img.shields.io/badge/Specialization-DFIR_%26_Threat_Intel-00b4d8?style=for-the-badge&logo=safari&logoColor=black&labelColor=0d1117" alt="Specialization"/>
+  <a href="https://www.linkedin.com/in/soumava-das-267999332" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Soumava_Das-0077b5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117" alt="LinkedIn"/>
+  </a>
   &nbsp;
-  <img src="https://img.shields.io/badge/Engineering-Kernel_eBPF_%26_LLMs-ff0055?style=for-the-badge&logo=shield&logoColor=white&labelColor=0d1117" alt="Engineering"/>
+  <a href="https://www.instagram.com/iamsoumava/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-@iamsoumava-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d1117" alt="Instagram"/>
+  </a>
   &nbsp;
   <img src="https://img.shields.io/badge/Status-Open_to_Opportunities-2ea44f?style=for-the-badge&logo=codeforces&logoColor=white&labelColor=0d1117" alt="Status"/>
   &nbsp;
@@ -27,26 +33,25 @@
 
 ---
 
-### 🖥️ SOC Analyst Terminal Session
+### 🖥️ Security Terminal Interface
 
 ```bash
-┌──(soumava㉿soc-terminal)-[~]
-└─$ whoami
-Soumava Das (Cyberdude) — Cybersecurity Researcher & Security Software Engineer
+┌──(Cyberdude㉿security)-[~/profile]
+└─$ identity
+Soumava Das — Cybersecurity Researcher & Security Software Engineer
 
-┌──(soumava㉿soc-terminal)-[~]
-└─$ cat /etc/security/capabilities.conf
-[RESEARCH_AREAS]
-• Threat Intelligence & Proactive Threat Hunting
-• Digital Forensics & Incident Response (DFIR)
-• Kernel-Level Telemetry & Packet Interception (eBPF / Rust)
-• Web & API Vulnerability Assessment (OWASP Top 10, OWASP API-10)
+┌──(Cyberdude㉿security)-[~/profile]
+└─$ expertise
+• Threat Intelligence & Proactive Threat Hunting (UBA / SOAR)
+• Digital Forensics & Incident Response (DFIR / PCAP / Memory)
+• Low-Level Kernel Telemetry & Packet Interception (eBPF / Rust / Aya)
+• Web & API Vulnerability Assessment (OWASP Top 10 / OWASP API-10)
 • Domain-Adapted LLM Engineering & Security Automation (QLoRA)
-• Attack Surface Mapping & OSINT Reconnaissance
+• Attack Surface Mapping & OSINT Reconnaissance (CT Logs / DNS)
 
-┌──(soumava㉿soc-terminal)-[~]
-└─$ cat /etc/security/mission.txt
-"Engineering resilient cyber defenses through deep packet inspection, kernel-level telemetry, and automated intelligence."
+┌──(Cyberdude㉿security)-[~/profile]
+└─$ objective
+"Building resilient security defenses through deep protocol inspection, low-level engineering, and automated detection."
 ```
 
 ---
@@ -55,10 +60,10 @@ Soumava Das (Cyberdude) — Cybersecurity Researcher & Security Software Enginee
 
 <div align="center">
 
-| Operational Vector | Security Domain Focus | Implemented Solutions & Tooling |
+| Operational Vector | Focus Domain | Key Capabilities & Implementations |
 | :--- | :--- | :--- |
-| 🛡️ **API & AppSec** | OWASP Top 10 & API Security | [API Sentinel](https://github.com/Cyberdude441/API-Sentinel-main) — Non-intrusive eBPF kernel probes for real-time BOLA & Shadow API discovery |
-| 🧠 **AI Security & LLMs** | Security LLMs & Threat Modeling | [CyberQwen-AI](https://github.com/Cyberdude441/CyberQwen-AI) — 4-Tier QLoRA fine-tuned cybersecurity model with multi-agent consensus synthesis |
+| 🛡️ **API & AppSec** | OWASP API Top 10 | [API Sentinel](https://github.com/Cyberdude441/API-Sentinel-main) — Non-intrusive eBPF kernel probes (Rust/Aya) for real-time BOLA & Shadow API discovery |
+| 🧠 **AI Security & LLMs** | Security LLMs & Threat Modeling | [CyberQwen-AI](https://github.com/Cyberdude441/CyberQwen-AI) — 4-Tier QLoRA fine-tuned cybersecurity LLM with multi-agent consensus synthesis |
 | 🚨 **Threat Intel & Blue Team** | Auth Monitoring & Incident Triage | [Brute Force SOC](https://github.com/Cyberdude441/bruteforce-detector) — Real-time telemetry, UBA threat scoring, SOAR containment, & Telegram alerting |
 | 🕵️ **OSINT & Reconnaissance** | Attack Surface Discovery | [Subdomain OSINT](https://github.com/Cyberdude441/Subdomain-Enumerator-OSINT) — Multi-threaded Certificate Transparency log harvester & DNS probe |
 | 🔬 **DFIR & Protocol Labs** | Forensics & Protocol Dissection | [CyberSec Journey](https://github.com/Cyberdude441/CyberSec-Journey) — 10-Cycle offensive/defensive research curriculum & custom network tools |
@@ -260,9 +265,11 @@ Soumava Das (Cyberdude) — Cybersecurity Researcher & Security Software Enginee
 
 ---
 
-### 📬 Connect & Collaborate
+### 🛡️ Security Philosophy & Connect
 
 <div align="center">
+
+> *"True security resilience is achieved not merely by erecting perimeter walls, but by understanding the mechanics of exploitation at the lowest layer and automating detection at runtime."*
 
 <p>I am actively seeking <strong>Cybersecurity Internships, Security Analyst, Detection Engineer, and Threat Intelligence</strong> roles.</p>
 
